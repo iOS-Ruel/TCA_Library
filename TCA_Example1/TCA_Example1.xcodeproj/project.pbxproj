@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4115207A2C7620420000BD6C /* TCA_Example1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419BB0382C7385AC002AFF86 /* TCA_Example1Tests.swift */; };
 		419BB0282C7385AA002AFF86 /* TCA_Example1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419BB0272C7385AA002AFF86 /* TCA_Example1App.swift */; };
-		419BB02A2C7385AA002AFF86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419BB0292C7385AA002AFF86 /* ContentView.swift */; };
+		419BB02A2C7385AA002AFF86 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419BB0292C7385AA002AFF86 /* CounterView.swift */; };
 		419BB02C2C7385AB002AFF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419BB02B2C7385AB002AFF86 /* Assets.xcassets */; };
 		419BB02F2C7385AB002AFF86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419BB02E2C7385AB002AFF86 /* Preview Assets.xcassets */; };
 		419BB0392C7385AC002AFF86 /* TCA_Example1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419BB0382C7385AC002AFF86 /* TCA_Example1Tests.swift */; };
@@ -36,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		411520762C760D480000BD6C /* Notice.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notice.md; sourceTree = "<group>"; };
+		411520772C7615B00000BD6C /* TCA-Example1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Example1-Info.plist"; sourceTree = SOURCE_ROOT; };
 		419BB0242C7385AA002AFF86 /* TCA_Example1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA_Example1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		419BB0272C7385AA002AFF86 /* TCA_Example1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_Example1App.swift; sourceTree = "<group>"; };
-		419BB0292C7385AA002AFF86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		419BB0292C7385AA002AFF86 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		419BB02B2C7385AB002AFF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		419BB02E2C7385AB002AFF86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		419BB0342C7385AC002AFF86 /* TCA_Example1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCA_Example1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,11 +101,13 @@
 		419BB0262C7385AA002AFF86 /* TCA_Example1 */ = {
 			isa = PBXGroup;
 			children = (
+				411520772C7615B00000BD6C /* TCA-Example1-Info.plist */,
 				419BB0272C7385AA002AFF86 /* TCA_Example1App.swift */,
-				419BB0292C7385AA002AFF86 /* ContentView.swift */,
+				419BB0292C7385AA002AFF86 /* CounterView.swift */,
 				419BB0542C7386AE002AFF86 /* CounterFeature.swift */,
 				419BB02B2C7385AB002AFF86 /* Assets.xcassets */,
 				419BB02D2C7385AB002AFF86 /* Preview Content */,
+				411520762C760D480000BD6C /* Notice.md */,
 			);
 			path = TCA_Example1;
 			sourceTree = "<group>";
@@ -269,7 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				419BB0552C7386AE002AFF86 /* CounterFeature.swift in Sources */,
-				419BB02A2C7385AA002AFF86 /* ContentView.swift in Sources */,
+				4115207A2C7620420000BD6C /* TCA_Example1Tests.swift in Sources */,
+				419BB02A2C7385AA002AFF86 /* CounterView.swift in Sources */,
 				419BB0282C7385AA002AFF86 /* TCA_Example1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +443,7 @@
 				DEVELOPMENT_TEAM = 9UU59NTC96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Example1-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,6 +473,7 @@
 				DEVELOPMENT_TEAM = 9UU59NTC96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Example1-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

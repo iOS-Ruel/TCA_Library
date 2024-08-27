@@ -8,7 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct ContentView: View {
+struct CounterView: View {
     let store: StoreOf<CounterFeature>
     
     var body: some View {
@@ -35,12 +35,39 @@ struct ContentView: View {
                 .background(Color.black.opacity(0.1))
                 .cornerRadius(10)
             }
+            
+            Button(store.isTimerRunning ? "Stop Timer" : "Start Timer") {
+                store.send(.toggleTimerButtonTapped)
+            }
+            .font(.largeTitle)
+            .padding()
+            .background(Color.black.opacity(0.1))
+            .cornerRadius(10)
+            
+                
+            
+            Button("Fact") {
+                store.send(.factButtonTapped)
+            }
+            .font(.largeTitle)
+            .padding()
+            .background(Color.black.opacity(0.1))
+            .cornerRadius(10)
+            
+            if store.isLoading {
+                ProgressView()
+            } else if let fact = store.fact {
+                Text(fact)
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    .padding()
+            }
         }
     }
 }
 
 #Preview {
-    ContentView(
+    CounterView(
         store: Store(initialState: CounterFeature.State()) {
             CounterFeature()
         }
