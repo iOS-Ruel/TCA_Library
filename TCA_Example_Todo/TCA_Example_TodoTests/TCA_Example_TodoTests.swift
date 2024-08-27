@@ -4,12 +4,10 @@
 //
 //  Created by Chung Wussup on 8/27/24.
 //
-
 import XCTest
 import ComposableArchitecture
 
 @testable import TCA_Example_Todo
-
 
 final class TCA_Example_TodoTests: XCTestCase {
     
@@ -36,7 +34,7 @@ final class TCA_Example_TodoTests: XCTestCase {
             description: "Test Description"
         )
         
-        let store = TestStore(initialState: Feature.State(), reducer: {
+        let store = TestStore(initialState: Feature.State(todos: [todo]), reducer: {
             Feature()
         })
         
@@ -58,7 +56,7 @@ final class TCA_Example_TodoTests: XCTestCase {
             description: "Test Description 2"
         )
         
-        let store = TestStore(initialState: Feature.State(), reducer: {
+        let store = TestStore(initialState: Feature.State(todos: [todo1, todo2]), reducer: {
             Feature()
         })
         
@@ -84,7 +82,7 @@ final class TCA_Example_TodoTests: XCTestCase {
             description: "Updated Description"
         )
         
-        let store = TestStore(initialState: Feature.State(), reducer: {
+        let store = TestStore(initialState: Feature.State(todos: [todo]), reducer: {
             Feature()
         })
         
@@ -94,18 +92,16 @@ final class TCA_Example_TodoTests: XCTestCase {
         
         XCTAssertEqual(store.state.todos.first?.title, "Updated To-Do")
         XCTAssertEqual(store.state.todos.first?.description, "Updated Description")
-        XCTAssertTrue(store.state.todos.first?.isCompleted ?? false)
     }
     
     func testRemoveNonExistentToDo() async {
         let todo = ToDo(
             id: UUID(),
             title: "Test To-Do",
-            description: "Test Description",
-            isCompleted: false
+            description: "Test Description"
         )
         
-        let store = TestStore(initialState: Feature.State(), reducer: {
+        let store = TestStore(initialState: Feature.State(todos: [todo]), reducer: {
             Feature()
         })
         
@@ -124,7 +120,7 @@ final class TCA_Example_TodoTests: XCTestCase {
             description: "Test Description"
         )
         
-        let store = TestStore(initialState: Feature.State(), reducer: {
+        let store = TestStore(initialState: Feature.State(todos: [todo]), reducer: {
             Feature()
         })
         
@@ -134,5 +130,4 @@ final class TCA_Example_TodoTests: XCTestCase {
             XCTAssertEqual($0.todos.count, 1)
         }
     }
-    
 }
